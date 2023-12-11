@@ -40,7 +40,7 @@ export default function Main() {
             <div>
               <h4 className="text-xl font-bold dark:text-white">HNGx</h4>
               <span className="text-sm dark:text-white">Backend Deveoper (Intern)</span>
-              <div className="mt-2 text-sm">Setp 9 - Nov 9</div>
+              <div className="mt-2 text-sm">Sept 9 - Nov 9</div>
               <p className="py-4">Interned at HNGx as a Backend Developer, leveraging Node.js for hands-on learning and contributing to dynamic projects.</p>
             </div>
           </div>
