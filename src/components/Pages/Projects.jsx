@@ -33,14 +33,14 @@ export default function Projects() {
 
   const project = projects?.map((data, i) => {
     return (
-      <Link key={i} to={data._id} className="border border-transparent bg-zinc-50 flex items-center gap-3 hover:border-gray-200 cursor-pointer p-4 rounded-lg">
+      <Link key={i} to={data._id} className="border border-transparent bg-zinc-50 flex items-center gap-3 hover:border-gray-200 cursor-pointer p-4 rounded-lg dark:bg-zinc-800 dark:hover:border-zinc-600">
         <div className="bg-gray-100 p-2 rounded-md min-w-[60px] min-h-[60px] flex items-center justify-center">
           <img src={data.logo} alt="" className="w-[40px]" />
         </div>
 
         <div>
-          <h4 className="font-medium mb-2">{data.title}</h4>
-          <p className="text-sm">{data.tagline}</p>
+          <h4 className="font-medium mb-2 dark:text-white">{data.title}</h4>
+          <p className="text-sm dark:text-white">{data.tagline}</p>
         </div>
       </Link>
     );
