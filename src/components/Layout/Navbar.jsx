@@ -2,10 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
-
-  // dynamically give the body element using useEffect the dark class
 
   const toggleNavBar = function () {
     setIsNavOpen((prevValue) => !prevValue);
@@ -23,7 +20,6 @@ export default function Navbar() {
           <img src="/logo.png" alt="logo" className="w-[30px] xl:w-[40px]" />
         </Link>
 
-        {/* flex */}
         <ul
           className={`flex flex-col xl:flex-row fixed xl:static bg-white xl:p-0 w-full h-screen xl:w-auto xl:h-auto left-0 top-[74px] p-8 items-start xl:items-center gap-6 text-sm font-bold ${
             isNavOpen ? 'translate-x-[0%]' : 'translate-x-[100%]'
@@ -54,7 +50,7 @@ export default function Navbar() {
           </div>
 
           {/* hamburger menu */}
-          <div className="border border-gray-200 rounded-md p-2 cursor-pointer xl:hidden" onClick={toggleNavBar}>
+          <div className="border border-gray-200 rounded-md p-2 cursor-pointer xl:hidden dark:border-zinc-600" onClick={toggleNavBar}>
             <div className="burger">
               <div className="line1 bg-gray-500"></div>
               <div className="line2 bg-gray-500"></div>
