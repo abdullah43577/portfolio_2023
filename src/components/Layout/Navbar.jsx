@@ -13,10 +13,16 @@ export default function Navbar() {
     document.documentElement.classList.toggle('dark');
   };
 
+  const handleLogoClick = function () {
+    if (isNavOpen) {
+      toggleNavBar();
+    }
+  };
+
   return (
     <nav className="border border-zinc-200 relative dark:border-gray-800">
       <div className="flex items-center justify-between py-4 lg:py-8 max-w-7xl mx-auto px-8 xl:px-0">
-        <Link to="/">
+        <Link to="/" onClick={handleLogoClick}>
           <img src="/logo.png" alt="logo" className="w-[30px] xl:w-[40px]" />
         </Link>
 

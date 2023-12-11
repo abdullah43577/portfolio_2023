@@ -25,7 +25,10 @@ export default function Main() {
               <div className="mt-2 text-sm">
                 <span>OCT 20, 2023 -</span> <span className="text-[#16a34a]">PRESENT</span>
               </div>
-              <p className="py-4">Volunteer writer for freeCodeCamp, producing technical articles around topics like nextjs, react, and JavaScript.</p>
+              <p className="py-4">
+                As a Frontend Developer at Nexilistings, I'm revolutionizing student housing by creating a user-friendly platform connecting artisans with students. Simplifying housing choices and payments, my role contributes to an innovative and
+                efficient housing solution.
+              </p>
             </div>
           </div>
 
@@ -38,7 +41,7 @@ export default function Main() {
               <h4 className="text-xl font-bold dark:text-white">HNGx</h4>
               <span className="text-sm dark:text-white">Backend Deveoper (Intern)</span>
               <div className="mt-2 text-sm">AUG 25 - AUG 50</div>
-              <p className="py-4">Volunteer writer for freeCodeCamp, producing technical articles around topics like nextjs, react, and JavaScript.</p>
+              <p className="py-4">Certainly! Here's the updated short note: Interned at HNGx as a Backend Developer, leveraging Node.js for hands-on learning and contributing to dynamic projects.</p>
             </div>
           </div>
 
