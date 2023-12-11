@@ -86,7 +86,7 @@ a.experience::before {
 }
 
 .projects {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
@@ -101,7 +101,7 @@ a.experience::before {
 
 .socials a:hover > div {
   color: #16a34a;
-  font-weight: bo;
+  font-weight: bold;
 }
 
 .screenshot {
