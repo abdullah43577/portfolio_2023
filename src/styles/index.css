@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Cabin:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -36,8 +36,10 @@ h3,
 h4,
 h5,
 h6,
-li {
-  font-family: 'Roboto', sans-serif;
+li,
+.checklist div a,
+.socials div {
+  font-family: 'Cabin', sans-serif;
 }
 
 nav ul {

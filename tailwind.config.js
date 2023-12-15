@@ -12,14 +12,7 @@ export default {
     },
 
     extend: {
-      colors: {
-        background: '#10141e',
-        nav: '#171e31',
-        btns: '#5a6a90',
-        white: '#f3f3f3',
-        iconNavLink: '#fc4747',
-        cardGenres: '#0e7490',
-      },
+      colors: {},
     },
   },
   plugins: [],

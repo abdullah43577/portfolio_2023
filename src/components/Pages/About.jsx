@@ -416,7 +416,7 @@ export default function About() {
 
             <a href="https://www.buymeacoffee.com/ayo540" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-2 border border-gray-200 rounded-md hover:bg-zinc-200 dark:bg-zinc-800 dark:border-gray-800">
               <label htmlFor="myCheckBox" className="cursor-not-allowed">
-                <img src="https://cdn.buymeacoffee.com/assets/logos/xmas-bmc-logo-1.5.png" alt="buy me a coffee icon" className="w-[14px]" />
+                <img src="https://cdn.buymeacoffee.com/assets/logos/xmas-bmc-logo-1.5.png" alt="coffee icon" className="w-[14px]" />
               </label>
               <div className=" text-zinc-600 font-medium dark:text-white">Buy me a Coffee</div>
             </a>
