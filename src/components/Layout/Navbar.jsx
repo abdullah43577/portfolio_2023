@@ -32,19 +32,19 @@ export default function Navbar() {
           } xl:translate-x-[0%] dark:text-white dark:bg-zinc-900 xl:bg-none xl:bg-transparent dark:xl:bg-transparent`}
         >
           <Link to="about" onClick={toggleNavBar}>
-            <li className="cursor-pointer">About</li>
+            <li className="cursor-pointer dark:hover:text-green-600">About</li>
           </Link>
 
           <Link to="projects" onClick={toggleNavBar}>
-            <li className="cursor-pointer">Projects</li>
+            <li className="cursor-pointer dark:hover:text-green-600">Projects</li>
           </Link>
 
           <Link to="blogs" onClick={toggleNavBar}>
-            <li className="cursor-pointer">Blogs</li>
+            <li className="cursor-pointer dark:hover:text-green-600">Blogs</li>
           </Link>
 
           <Link to="photos" onClick={toggleNavBar}>
-            <li className="cursor-pointer">Photos</li>
+            <li className="cursor-pointer dark:hover:text-green-600">Photos</li>
           </Link>
         </ul>
 

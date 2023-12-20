@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 const { VITE_API_SERVER } = import.meta.env;
 import useFetch from '../hooks/useFetch';
 import useFadeUpEffect from '../hooks/useFadeUpEffect';
-import ReactLoader from '../helper/loader';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -54,7 +55,7 @@ export default function Projects() {
           Among countless projects, these are my proudest achievements — <span className="italic">a testament to my dedication and creativity.</span>
         </p>
 
-        <section className={`projects ${project.length <= 0 ? 'flex' : 'grid'} items-center justify-center`}>{project.length > 0 ? project : <ReactLoader />}</section>
+        <section className={`projects ${project.length <= 0 ? 'flex' : 'grid'} items-center justify-center`}>{project.length > 0 ? project : <Skeleton containerClassName="flex-1" count={5} height={30} baseColor="gray" />}</section>
       </div>
     </section>
   );
