@@ -3,6 +3,8 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import CV from '../../assets/CV Resume.pdf';
 import useFadeUpEffect from '../hooks/useFadeUpEffect';
+import image1 from '../../assets/Anime-style image of a young hacker typing lines of code_.jpeg';
+import image2 from '../../assets/Smart Boy.jpeg';
 
 export default function About() {
   const element = useRef(null);
@@ -233,7 +235,7 @@ export default function About() {
           </div>
 
           <div className="mb-6 xl:mb-0 dark:text-white">
-            <div className="bg-zinc-200 rounded-lg w-[250px] lg:w-[500px] h-[250px] lg:h-[450px] dark:bg-zinc-800"></div>
+            <img src={image2} alt="" className="bg-zinc-200 rounded-lg w-[250px] lg:w-[500px]" />
 
             <div className=" flex items-center justify-between my-4">
               <Link to="resume" className="flex items-center justify-center gap-1 p-2 border-transparent border hover:border-zinc-200 cursor-pointer w-[90%] rounded-md dark:bg-zinc-800 dark:hover:border-zinc-600">
