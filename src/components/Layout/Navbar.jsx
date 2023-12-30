@@ -29,7 +29,7 @@ export default function Navbar() {
         <ul
           className={`flex flex-col xl:flex-row fixed xl:static bg-white xl:p-0 w-full h-screen xl:w-auto xl:h-auto left-0 top-[74px] p-8 items-start xl:items-center gap-6 text-sm font-bold ${
             isNavOpen ? 'translate-x-[0%]' : 'translate-x-[100%]'
-          } xl:translate-x-[0%] dark:text-white dark:bg-zinc-900 xl:bg-none xl:bg-transparent dark:xl:bg-transparent`}
+          } xl:translate-x-[0%] dark:text-white dark:bg-zinc-900 xl:bg-none xl:bg-transparent dark:xl:bg-transparent z-[9000]`}
         >
           <Link to="about" onClick={toggleNavBar}>
             <li className="cursor-pointer dark:hover:text-green-600">About</li>

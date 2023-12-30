@@ -10,7 +10,7 @@ export default function Main() {
     <section ref={element} className="fade translate-y-[100px] opacity-5">
       <Hero />
 
-      <div className="max-w-7xl mx-auto px-8 xl:px-0">
+      <div className="max-w-7xl mx-auto px-8 xl:px-0 mt-16">
         <h2 className="text-xl lg:text-3xl font-bold mb-10 dark:text-white">Work Experience</h2>
 
         <section id="grid">

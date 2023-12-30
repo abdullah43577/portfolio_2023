@@ -93,7 +93,15 @@ a.experience::before {
   gap: 16px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .checklist,
+  .socials,
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
   .checklist,
   .socials,
   .projects {

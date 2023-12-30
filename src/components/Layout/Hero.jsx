@@ -5,8 +5,8 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="max-w-7xl flex flex-col xl:flex-row items-center justify-between mx-auto gap-8 px-8 xl:px-0">
-        <section className="xl:w-[50%] w-auto">
+      <div className="max-w-7xl flex flex-col md:flex-row items-center justify-between mx-auto gap-8 px-8 xl:px-0">
+        <section className="md:w-[50%] w-auto">
           <h2 className="text-2xl lg:text-4xl font-bold dark:text-white">Fullstack engineer, professional typist & Gamer! </h2>
           <p className="text-lg my-6 dark:text-zinc-400">Experienced full-stack developer dedicated to crafting responsive, user-engaging, and visually appealing web interfaces that elevate the online world.</p>
 
@@ -53,7 +53,7 @@ export default function Hero() {
           </section>
         </section>
 
-        <svg viewBox="0 0 1273 906" fill="none" xmlns="http://www.w3.org/2000/svg" width={isSmallScreen ? '300' : '500'}>
+        <svg viewBox="0 0 1273 906" fill="none" xmlns="http://www.w3.org/2000/svg" width={isSmallScreen ? '300' : '350'}>
           <g>
             <path
               className="path"
