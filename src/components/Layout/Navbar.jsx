@@ -27,9 +27,9 @@ export default function Navbar() {
         </Link>
 
         <ul
-          className={`flex flex-col xl:flex-row fixed xl:static bg-white xl:p-0 w-full h-screen xl:w-auto xl:h-auto left-0 top-[74px] p-8 items-start xl:items-center gap-6 text-sm font-bold ${
+          className={`flex flex-col md:flex-row fixed md:static bg-white md:p-0 w-full h-screen md:w-auto md:h-auto left-0 top-[74px] p-8 items-start md:items-center gap-6 text-sm font-bold ${
             isNavOpen ? 'translate-x-[0%]' : 'translate-x-[100%]'
-          } xl:translate-x-[0%] dark:text-white dark:bg-zinc-900 xl:bg-none xl:bg-transparent dark:xl:bg-transparent z-[9000]`}
+          } md:translate-x-[0%] dark:text-white dark:bg-zinc-900 md:bg-none md:bg-transparent dark:md:bg-transparent z-[9000]`}
         >
           <Link to="about" onClick={toggleNavBar}>
             <li className="cursor-pointer dark:hover:text-green-600">About</li>
@@ -56,7 +56,7 @@ export default function Navbar() {
           </div>
 
           {/* hamburger menu */}
-          <div className="border border-gray-200 rounded-md p-2 cursor-pointer xl:hidden dark:border-zinc-600" onClick={toggleNavBar}>
+          <div className="border border-gray-200 rounded-md p-2 cursor-pointer md:hidden dark:border-zinc-600" onClick={toggleNavBar}>
             <div className="burger">
               <div className="line1 bg-gray-500"></div>
               <div className="line2 bg-gray-500"></div>

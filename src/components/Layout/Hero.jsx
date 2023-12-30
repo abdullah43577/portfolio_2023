@@ -1,7 +1,7 @@
 import { useMediaQuery } from '@react-hook/media-query';
 
 export default function Hero() {
-  const isSmallScreen = useMediaQuery('(max-width: 500px)');
+  const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
   return (
     <section>
@@ -53,7 +53,7 @@ export default function Hero() {
           </section>
         </section>
 
-        <svg viewBox="0 0 1273 906" fill="none" xmlns="http://www.w3.org/2000/svg" width={isSmallScreen ? '300' : '350'}>
+        <svg viewBox="0 0 1273 906" fill="none" xmlns="http://www.w3.org/2000/svg" width={isSmallScreen ? '300' : '500'}>
           <g>
             <path
               className="path"
