@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import CV from '../../assets/CV Resume.pdf';
+import CV from '../../assets/Resume.pdf';
 import useFadeUpEffect from '../hooks/useFadeUpEffect';
 
 export default function Resume() {

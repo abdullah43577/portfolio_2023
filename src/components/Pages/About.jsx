@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import CV from '../../assets/CV Resume.pdf';
+import CV from '../../assets/Resume.pdf';
 import useFadeUpEffect from '../hooks/useFadeUpEffect';
 import image1 from '../../assets/Anime-style image of a young hacker typing lines of code_.jpeg';
 import image2 from '../../assets/Smart Boy.jpeg';
