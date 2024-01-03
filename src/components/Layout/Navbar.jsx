@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
@@ -10,8 +10,23 @@ export default function Navbar() {
   };
 
   const toggleBackground = function () {
-    document.documentElement.classList.toggle('dark');
+    let currentBg;
+    if (!document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.add('dark');
+      currentBg = 'dark';
+      localStorage.setItem('dark', currentBg);
+    } else {
+      document.documentElement.classList.remove('dark');
+      currentBg = 'null';
+      localStorage.setItem('dark', currentBg);
+    }
   };
+
+  useEffect(() => {
+    // get the current background and set to the documentElement
+    const currentBg = localStorage.getItem('dark');
+    if (currentBg === 'dark') document.documentElement.classList.add(currentBg);
+  }, []);
 
   const handleLogoClick = function () {
     if (isNavOpen) {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 const { VITE_API_SERVER } = import.meta.env;
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +9,8 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function Projectdata() {
   const { id } = useParams();
-  const [data, setData] = useState({});
+  const { data: dataObj } = useFetch(`${VITE_API_SERVER}/get_single_project/${id}`);
+  const data = dataObj.project;
   const nav = useNavigate();
   const element = useRef(null);
   useFadeUpEffect(element);
@@ -21,19 +22,6 @@ export default function Projectdata() {
       document.title = 'Abdullah Ayoola | Fullstack Engineer';
     };
   }, []);
-
-  useEffect(() => {
-    const FetchInfo = async function () {
-      try {
-        const data = await useFetch(`${VITE_API_SERVER}/get_single_project/${id}`);
-        setData(data.project);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    FetchInfo();
-  }, [id]);
 
   return (
     <section ref={element} className="fade translate-y-[100px] opacity-5">

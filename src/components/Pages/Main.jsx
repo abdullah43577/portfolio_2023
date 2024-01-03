@@ -68,9 +68,7 @@ export default function Main() {
             <div>
               <h4 className="text-xl font-bold dark:text-white">Udemy</h4>
               <span className="text-sm dark:text-white">Complete Javascript Course: From Zero to Expert!</span>
-              <div className="mt-2 text-sm">
-                <span>AUG 25, 2022 -</span> <span>PRESENT</span>
-              </div>
+              <div className="mt-2 text-sm">AUG 25, 2022</div>
               <p className="py-4">This certification is earned by completing ~ 70 hours of coding challenges and projects.</p>
             </div>
           </div>

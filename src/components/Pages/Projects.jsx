@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 const { VITE_API_SERVER } = import.meta.env;
 import useFetch from '../hooks/useFetch';
@@ -7,7 +7,8 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
+  const { data } = useFetch(`${VITE_API_SERVER}/get_projects`);
+  const { projects } = data;
   const element = useRef(null);
   useFadeUpEffect(element);
 
@@ -19,33 +20,21 @@ export default function Projects() {
     };
   }, []);
 
-  useEffect(() => {
-    const FetchProjects = async function () {
-      try {
-        const data = await useFetch(`${VITE_API_SERVER}/get_projects`);
-        setProjects(data.projects);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+  const project =
+    projects?.map((data, i) => {
+      return (
+        <Link key={i} to={data._id} className="border border-transparent bg-zinc-50 flex items-center gap-3 hover:border-gray-200 cursor-pointer p-4 rounded-lg dark:bg-zinc-800 dark:hover:border-zinc-600">
+          <div className="bg-gray-100 p-2 rounded-md min-w-[60px] min-h-[60px] flex items-center justify-center">
+            <img src={data.logo} alt="" className="w-[40px]" />
+          </div>
 
-    FetchProjects();
-  }, []);
-
-  const project = projects?.map((data, i) => {
-    return (
-      <Link key={i} to={data._id} className="border border-transparent bg-zinc-50 flex items-center gap-3 hover:border-gray-200 cursor-pointer p-4 rounded-lg dark:bg-zinc-800 dark:hover:border-zinc-600">
-        <div className="bg-gray-100 p-2 rounded-md min-w-[60px] min-h-[60px] flex items-center justify-center">
-          <img src={data.logo} alt="" className="w-[40px]" />
-        </div>
-
-        <div>
-          <h4 className="font-medium mb-2 dark:text-white">{data.title}</h4>
-          <p className="text-sm dark:text-white">{data.tagline}</p>
-        </div>
-      </Link>
-    );
-  });
+          <div>
+            <h4 className="font-medium mb-2 dark:text-white">{data.title}</h4>
+            <p className="text-sm dark:text-white">{data.tagline}</p>
+          </div>
+        </Link>
+      );
+    }) || [];
 
   return (
     <section ref={element} className="fade translate-y-[100px] opacity-5">
@@ -55,7 +44,9 @@ export default function Projects() {
           Among countless projects, these are my proudest achievements — <span className="italic">a testament to my dedication and creativity.</span>
         </p>
 
-        <section className={`projects ${project.length <= 0 ? 'flex' : 'grid'} items-center justify-center`}>{project.length > 0 ? project : <Skeleton containerClassName="flex-1" count={5} height={30} baseColor="gray" />}</section>
+        <section className={`projects ${project?.length <= 0 ? 'flex' : 'grid'} items-center justify-center`}>
+          {project?.length > 0 ? project : <Skeleton containerClassName="flex-1" count={5} height={60} borderRadius={'10px'} baseColor="gray" />}
+        </section>
       </div>
     </section>
   );
