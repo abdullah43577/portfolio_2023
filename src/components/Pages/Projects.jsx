@@ -7,8 +7,8 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function Projects() {
-  const { data } = useFetch(`${VITE_API_SERVER}/get_projects`);
-  const { projects } = data;
+  const { data } = useFetch(`${VITE_API_SERVER}/get_projects`, 'getProjects');
+  const { projects } = data || {};
   const element = useRef(null);
   useFadeUpEffect(element);
 

@@ -9,8 +9,8 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function Projectdata() {
   const { id } = useParams();
-  const { data: dataObj } = useFetch(`${VITE_API_SERVER}/get_single_project/${id}`);
-  const data = dataObj.project;
+  const { data: dataObj } = useFetch(`${VITE_API_SERVER}/get_single_project/${id}`, `${id}`);
+  const data = dataObj?.project || {};
   const nav = useNavigate();
   const element = useRef(null);
   useFadeUpEffect(element);
