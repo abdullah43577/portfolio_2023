@@ -126,7 +126,7 @@ export default function About() {
 
                 <div className="flex items-center flex-wrap xl:items-center gap-2 my-6">
                   <div className="flex items-center gap-1">
-                    <img src="/public/typescript.png" alt="typescript logo" className="w-[15px] h-[15px]" />
+                    <img src="/typescript.png" alt="typescript logo" className="w-[15px] h-[15px]" />
 
                     <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank" rel="noreferrer" className="underline text-blue-500 font-semibold">
                       Typescript
