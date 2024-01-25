@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import CV from '../../assets/Resume.pdf';
 import useFadeUpEffect from '../hooks/useFadeUpEffect';
-import image1 from '../../assets/Anime-style image of a young hacker typing lines of code_.jpeg';
 import image2 from '../../assets/Smart Boy.jpeg';
 
 export default function About() {
@@ -123,6 +122,18 @@ export default function About() {
                   </div>
 
                   <span>- Programming Language</span>
+                </div>
+
+                <div className="flex items-center flex-wrap xl:items-center gap-2 my-6">
+                  <div className="flex items-center gap-1">
+                    <img src="/public/typescript.png" alt="typescript logo" className="w-[15px] h-[15px]" />
+
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank" rel="noreferrer" className="underline text-blue-500 font-semibold">
+                      Typescript
+                    </a>
+                  </div>
+
+                  <span>- Dynamic Typed language (Extends Javascript)</span>
                 </div>
 
                 <div className="flex items-center flex-wrap xl:items-center gap-2">
