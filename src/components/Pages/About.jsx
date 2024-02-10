@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import CV from '../../assets/Resume.pdf';
 import useFadeUpEffect from '../hooks/useFadeUpEffect';
-import image2 from '../../assets/Smart Boy.jpeg';
+import image2 from '../../assets/profile_img.jpg';
 
 export default function About() {
   const element = useRef(null);
