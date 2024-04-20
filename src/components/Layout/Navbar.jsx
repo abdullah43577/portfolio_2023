@@ -53,14 +53,6 @@ export default function Navbar() {
           <Link to="projects" onClick={toggleNavBar}>
             <li className="cursor-pointer dark:hover:text-green-600">Projects</li>
           </Link>
-
-          <Link to="blogs" onClick={toggleNavBar}>
-            <li className="cursor-pointer dark:hover:text-green-600">Blogs</li>
-          </Link>
-
-          <Link to="photos" onClick={toggleNavBar}>
-            <li className="cursor-pointer dark:hover:text-green-600">Photos</li>
-          </Link>
         </ul>
 
         <div className="flex items-center gap-2">

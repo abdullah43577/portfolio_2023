@@ -36,6 +36,16 @@ export default function Projects() {
       );
     }) || [];
 
+  const skeletonProjects = Array.from({ length: 9 }, (_, i) => (
+    <div key={i} className="border border-transparent bg-zinc-50 flex items-center gap-3 cursor-not-allowed p-4 rounded-lg dark:bg-zinc-800">
+      <Skeleton circle width={60} height={60} />
+      <div>
+        <Skeleton width={200} height={24} />
+        <Skeleton width={280} height={16} />
+      </div>
+    </div>
+  ));
+
   return (
     <section ref={element} className="fade translate-y-[100px] opacity-5">
       <div className="max-w-7xl mx-auto px-8 xl:px-0">
@@ -44,9 +54,7 @@ export default function Projects() {
           Among countless projects, these are my proudest achievements — <span className="italic">a testament to my dedication and creativity.</span>
         </p>
 
-        <section className={`projects ${project?.length <= 0 ? 'flex' : 'grid'} items-center justify-center`}>
-          {project?.length > 0 ? project : <Skeleton containerClassName="flex-1" count={5} height={60} borderRadius={'10px'} baseColor="gray" />}
-        </section>
+        <section className={`projects ${project?.length <= 0 ? 'flex flex-wrap' : 'grid'} items-center justify-center`}>{project?.length > 0 ? project : skeletonProjects}</section>
       </div>
     </section>
   );

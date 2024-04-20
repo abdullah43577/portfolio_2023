@@ -4,8 +4,7 @@ import Home from './components/Pages/Main';
 import About from './components/Pages/About';
 import Projects from './components/Pages/Projects';
 import ProjectDetail from './components/Pages/ProjectDetail';
-import Blogs from './components/Pages/Blogs';
-import Photos from './components/Pages/Photos';
+
 import Resume from './components/Pages/Resume';
 
 const router = createBrowserRouter(
@@ -16,8 +15,6 @@ const router = createBrowserRouter(
       <Route path="about/resume" element={<Resume />} />
       <Route path="projects" element={<Projects />} />
       <Route path="projects/:id" element={<ProjectDetail />} />
-      <Route path="blogs" element={<Blogs />} />
-      <Route path="photos" element={<Photos />} />
     </Route>
   )
 );

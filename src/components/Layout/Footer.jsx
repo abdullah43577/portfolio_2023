@@ -3,7 +3,7 @@ export default function Footer() {
 
   return (
     <footer className="border border-t-zinc-200 mt-16 dark:border-gray-800">
-      <div className="flex flex-col xl:flex-row items-center justify-between text-zinc-700 dark:text-white max-w-7xl mx-auto pt-8 pb-32 text-sm px-8 xl:px-0">
+      <div className="flex flex-col xl:flex-row items-center justify-between text-zinc-700 dark:text-white max-w-7xl mx-auto pt-8 pb-16 md:pb-32 text-sm px-8 xl:px-0">
         <div className="flex flex-col xl:flex-row items-center">
           <span>Built with: </span>
 
